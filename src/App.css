@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    padding-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.primary_heading {
+    font-size: 30px;
+    font-family: 'Domine', serif;
+    color: #444;
+}
+
+.secondary_heading {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Nunito', sans-serif;
+}
+
+.vertical_seperator {
+    width: 1px;
+    height: inherit;
+    background-color: #ccc;
+    /* margin: 0 20px; */
+}
+
+.brand_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #222;
+    padding: 5px 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.brand_logo h1 {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.title_bar {
+    height: auto;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title_bar li {
+    padding: 15px 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-family: 'Domine', serif;
+    font-size: 16px;
+}
+
+.title_bar li:hover,
+.title_bar li:active {
+    background-color: #fff;
+    color: #222;
+}
+
+.menu_icon {
+    display: none;
+}
+
+/*news component*/
+.news_container {
+    padding: 20px 80px;
+    display: grid;
+    grid-template-columns: 2.5fr auto 1fr;
+    grid-gap: 15px;
+}
+
+.news_card {
+    height: auto;
+    margin: 15px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+
+.news_card:hover p,
+.news_card:hover .primary_heading,
+.news_card:active p,
+.news_card:active .primary_heading {
+    color: #111;
+}
+
+.seperator {
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.news_card .news_photo {
+    height: 180px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.news_content {
+    padding: 0 20px;
+}
+
+.news_content h2 {
+    font-size: 16px;
+    color: #888;
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    margin: 5px 0 10px;
+}
+
+/*top stories*/
+.news_sources {
+    padding: 0 20px;
+}
+
+.news_sources h1 {
+    font-family: 'Domine', serif;
+    font-size: 28px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.news_sources_card {
+    padding: 20px 0;
+}
+
+.news_sources_card h2 {
+    font-family: 'Nunito', serif;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.news_sources_card p {
+    font-family: 'Nunito', serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 5px 0;
+}
