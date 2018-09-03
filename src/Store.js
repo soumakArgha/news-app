@@ -2,10 +2,7 @@ import React, {
     Component
 } from 'react'
 import axios from 'axios'
-import {
-    // LinearProgress,
-    CircularProgress
-} from '@material-ui/core'
+
 import {
     API_KEY
 } from './config/apikey'
@@ -20,6 +17,7 @@ export default class Store extends Component {
         super(props);
         this.state = {
             categories: [
+                "home",
                 'business',
                 'technology',
                 'science',
@@ -29,7 +27,14 @@ export default class Store extends Component {
             ],
             newsSources: [],
             isLoaded: false,
-            topNews: []
+            topNews: [],
+            menuOpen: false,
+            closeMenu: () => {
+                this.setState({menuOpen: false})
+            },
+            openMenu: () => {
+                this.setState({menuOpen: true})
+            }
         }
     }
 
@@ -47,23 +52,18 @@ export default class Store extends Component {
                     .catch(err => console.log(err));
             })
             .catch(err => console.log(err));
-
-
-
     }
 
+
     render() {
-        if (!this.state.isLoaded) {
-            return ( <CircularProgress style={{position: 'absolute', top: '50%', left: '50%'}}/> )
-        } else {
-            return ( 
-                <Provider value={this.state}> 
-                    {
-                        this.props.children
-                    }
-                </Provider>
-            )
-        }
+        return ( 
+            <Provider value={this.state}> 
+                {
+                    this.props.children
+                }
+            </Provider>
+        )
+        
     }
 }
 
